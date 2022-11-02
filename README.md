@@ -18,3 +18,8 @@ bash$ sudo apt install composer
 
 以上が第一回 [SQLite PHP: Establish a Connection to SQLite Database](https://www.sqlitetutorial.net/sqlite-php/connect/)
 完了に必要だ。
+
+## Workflow
+
+VS Code にサーバー稼働と `composer update` それぞれを一発で実行するタスクを用意した。
+これらを適宜呼び出してからブラウザーを開いて動作確認をする。

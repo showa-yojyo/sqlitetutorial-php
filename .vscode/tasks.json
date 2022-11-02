@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start server",
+            "type": "shell",
+            "command": "php -S 127.0.0.1:8000",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "composer update (php generation)",
+            "type": "shell",
+            "command": "composer update",
+            "problemMatcher": []
+        }
+    ]
+}
