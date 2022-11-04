@@ -19,6 +19,10 @@ bash$ sudo apt install composer
 以上が第一回 [SQLite PHP: Establish a Connection to SQLite Database](https://www.sqlitetutorial.net/sqlite-php/connect/)
 完了に必要だ。
 
+[SQLite PHP: Write, Read, and Update BLOB Data](https://www.sqlitetutorial.net/sqlite-php/blob/) を完遂するには
+PDF ファイルと PNG ファイルを一つずつ必要とする。適当に用意して `assets` フォルダーに置けばいい。
+PHP でのファイル名を `test.pdf`, `test.png` に変更しておいた。
+
 ## Workflow
 
 VS Code にサーバー稼働と `composer update` それぞれを一発で実行するタスクを用意した。
