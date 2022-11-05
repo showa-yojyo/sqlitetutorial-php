@@ -94,19 +94,21 @@ class SQLiteBLOB {
             throw new \Exception("File %s not found.");
 
         $fh = fopen($pathToFile, 'rb');
+        if (!is_resource($fh)) {
+            throw new \Exception("File $pathToFile open failed.");
+        }
 
         $sql = "UPDATE documents
                 SET mime_type = :mime_type,
                     doc = :doc
                 WHERE document_id = :document_id";
 
-        $stmt = $this->conn->prepare($sql);
-
+        $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':mime_type', $mimeType);
         $stmt->bindParam(':data', $fh, \PDO::PARAM_LOB);
         $stmt->bindParam(':document_id', $documentId);
 
-        fclose($fh);
+        //fclose($fh);
 
         return $stmt->execute();
     }
